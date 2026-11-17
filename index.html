@@ -1,70 +1,37 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Portfolio | 个人技术作品集</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f6f8fa;
-      color: #24292f;
-      margin: 0;
-      line-height: 1.7;
-    }
-    main {
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 24px;
-    }
-    h1 { font-size: 38px; }
-    .subtitle { color: #57606a; }
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-      margin-top: 24px;
-    }
-    .card {
-      background: white;
-      padding: 24px;
-      border-radius: 12px;
-      border: 1px solid #d0d7de;
-    }
-    .card h3 { margin-top: 0; }
-  </style>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1014"><meta name="description" content="zongyunfwx 的 AI 算法工程作品集：自动驾驶、VLA、机器人导航与深度学习。">
+  <title>zongyunfwx · AI 算法工程作品集</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/style.css"><script src="assets/main.js" defer></script>
 </head>
 <body>
-  <main>
-    <h1>你好，欢迎来到我的技术作品集</h1>
-    <p class="subtitle">
-      AI · 自动驾驶 · 机器人导航 · 深度学习
-    </p>
-
-    <h2>关于我</h2>
-    <p>
-      这里介绍我的研究方向、技术能力和项目经历。
-    </p>
-
-    <h2>项目展示</h2>
-    <div class="projects">
-      <div class="card">
-        <h3>端到端自动驾驶</h3>
-        <p>轨迹预测、生成式规划与模型评测。</p>
-      </div>
-      <div class="card">
-        <h3>VLA 与无人机导航</h3>
-        <p>视觉语言动作模型与导航算法。</p>
-      </div>
-      <div class="card">
-        <h3>视觉语言导航</h3>
-        <p>多模态理解、空间建图与路径规划。</p>
-      </div>
-    </div>
-
-    <h2>联系方式</h2>
-    <p>GitHub | Email | Resume</p>
-  </main>
-</body>
-</html>
+<a class="skip-link" href="#main">跳到主要内容</a>
+<header class="site-header"><div class="container header-inner"><a class="brand" href="./"><span class="brand-mark">z/</span>zongyunfwx<span class="accent">.</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" hidden>菜单 ＋</button><nav id="primary-nav" aria-label="主导航"><a href="#about">关于</a><a href="#expertise">技能</a><a href="#projects">精选项目</a><a class="nav-contact" href="#contact">联系我 ↗</a></nav></div></header>
+<main id="main">
+  <section class="hero container" aria-labelledby="hero-title">
+    <div><div class="eyebrow"><span class="status-dot"></span> AI ALGORITHM ENGINEERING</div><h1 id="hero-title">让智能走出模型，<br>走向<span class="accent">真实世界。</span></h1><p class="hero-description">你好，我是 <strong>zongyunfwx</strong>。<br>关注自动驾驶、具身智能与机器人导航，<br>探索从环境感知到自主决策的完整链路。</p><div class="hero-actions"><a class="button primary" href="#projects">探索我的项目 <span>↗</span></a><a class="text-link" href="https://github.com/zongyunfwx" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><div class="hero-topics">PERCEPTION <i>/</i> REASONING <i>/</i> ACTION</div></div>
+    <div class="hero-visual"><div class="visual-topline"><span><span class="status-dot"></span> AUTONOMOUS SYSTEM</span><span>FIG. 01</span></div><img src="assets/autonomy.svg" width="640" height="460" alt="自动驾驶概念示意：车辆根据环境信息沿预测轨迹行驶。"><div class="visual-bottom"><span>感知世界 · 理解场景 · 生成行动</span><span class="accent">[ x, y, θ ]</span></div></div>
+    <div class="hero-footer"><span>以算法理解世界，以工程连接现实。</span><a href="#about">向下探索 ↓</a></div>
+  </section>
+  <section id="about" class="section container" aria-labelledby="about-title"><div class="section-label"><span>01 / ABOUT</span><span>关于我</span></div><div class="about-content"><h2 id="about-title">在感知与行动之间，<br>构建智能的连接。</h2><div><p>我关注 AI 算法如何在复杂的物理环境中发挥作用：从视觉感知与场景表征，到多模态理解、轨迹规划和机器人控制。</p><p>这里记录我的技术探索与项目思路。希望用清晰的问题定义、可复现的实验和完整的工程实践，逐步连接模型能力与实际任务。</p><a class="inline-link" href="#projects">查看研究与实践方向 ↗</a></div></div><div class="focus-strip"><span class="mono">RESEARCH FOCUS</span><span>自动驾驶</span><span>Vision · Language · Action</span><span>机器人导航</span><span>深度学习</span></div></section>
+  <section id="expertise" class="section container" aria-labelledby="expertise-title"><div class="section-label"><span>02 / EXPERTISE</span><span>技术方向</span></div><div class="section-heading"><h2 id="expertise-title">从模型到系统的技术视角</h2><p>围绕智能系统的四个核心环节展开探索。</p></div><div class="skills-grid">
+    <article class="skill"><span class="skill-number">01</span><h3>环境感知与表征</h3><p>视觉特征提取、多传感器融合与空间表征，让模型理解周围环境。</p><div class="tags"><span>Computer Vision</span><span>BEV</span><span>Sensor Fusion</span></div></article>
+    <article class="skill"><span class="skill-number">02</span><h3>多模态与具身智能</h3><p>探索视觉、语言与动作的对齐，让任务意图转化为可执行的行动。</p><div class="tags"><span>VLM / VLA</span><span>Transformer</span><span>Imitation Learning</span></div></article>
+    <article class="skill"><span class="skill-number">03</span><h3>规划、导航与控制</h3><p>连接定位建图、路径搜索和局部避障，关注动态环境下的决策。</p><div class="tags"><span>SLAM</span><span>Path Planning</span><span>ROS 2</span></div></article>
+    <article class="skill"><span class="skill-number">04</span><h3>训练、评估与部署</h3><p>重视数据质量、实验对比和推理效率，让每一次模型迭代有据可循。</p><div class="tags"><span>Python / C++</span><span>PyTorch</span><span>ONNX</span></div></article>
+  </div><p class="content-note">以上为关注与学习方向；具体技术实践以项目记录为准。</p></section>
+  <section id="projects" class="section container" aria-labelledby="projects-title"><div class="section-label"><span>03 / SELECTED WORK</span><span>精选项目</span></div><div class="section-heading"><div><h2 id="projects-title">面向真实世界的算法探索</h2><p>四个项目方向，串联感知、理解与行动。</p></div><span class="small-label">PROJECT INDEX / 01—04</span></div><p class="project-notice">当前展示为项目方向与方案草稿，代码、实验结果及演示材料待补充。</p>
+    <div class="project-filters" role="group" aria-label="筛选项目" hidden><button class="active" data-filter="all" aria-pressed="true">全部项目 <span>04</span></button><button data-filter="driving" aria-pressed="false">自动驾驶</button><button data-filter="vla" aria-pressed="false">VLA</button><button data-filter="robotics" aria-pressed="false">机器人导航</button><button data-filter="learning" aria-pressed="false">深度学习</button></div>
+    <div class="projects-grid">
+      <a class="project-card" href="projects/autonomous-driving.html" data-category="driving"><div class="project-art art-driving"><span class="art-label">01 / AUTONOMOUS DRIVING</span><img src="assets/autonomy.svg" width="640" height="460" alt="自动驾驶轨迹规划示意" loading="lazy"><span class="art-caption">PERCEPTION → PLANNING → CONTROL</span></div><div class="project-body"><div class="project-meta">自动驾驶 <span>方案草稿</span></div><h3>端到端自动驾驶 <span>↗</span></h3><p>从多视角视觉表征到未来轨迹预测，探索感知与规划的联合建模。</p><div class="tags"><span>BEV</span><span>Trajectory Planning</span><span>PyTorch</span></div><div class="project-link">查看项目详情 <span>↗</span></div></div></a>
+      <a class="project-card" href="projects/vision-language-action.html" data-category="vla"><div class="project-art art-vla"><span class="art-label">02 / EMBODIED INTELLIGENCE</span><img src="assets/vla.svg" width="640" height="380" alt="视觉与语言融合后生成机器人动作的示意" loading="lazy"><span class="art-caption">SEE. UNDERSTAND. ACT.</span></div><div class="project-body"><div class="project-meta">VLA / 具身智能 <span>方案草稿</span></div><h3>视觉语言动作模型 <span>↗</span></h3><p>融合视觉观察与自然语言指令，探索面向机器人操作的动作生成。</p><div class="tags"><span>VLA</span><span>Multimodal</span><span>Imitation Learning</span></div><div class="project-link">查看项目详情 <span>↗</span></div></div></a>
+      <a class="project-card" href="projects/robot-navigation.html" data-category="robotics"><div class="project-art art-navigation"><span class="art-label">03 / ROBOT NAVIGATION</span><img src="assets/navigation.svg" width="640" height="380" alt="机器人在地图中绕过障碍到达目标的示意" loading="lazy"><span class="art-caption">MAP → LOCALIZE → NAVIGATE</span></div><div class="project-body"><div class="project-meta">机器人导航 <span>方案草稿</span></div><h3>面向目标的自主导航 <span>↗</span></h3><p>结合空间建图、全局路径规划与局部避障，连接环境理解和自主移动。</p><div class="tags"><span>ROS 2</span><span>SLAM</span><span>Path Planning</span></div><div class="project-link">查看项目详情 <span>↗</span></div></div></a>
+      <a class="project-card" href="projects/deep-learning.html" data-category="learning"><div class="project-art art-learning"><span class="art-label">04 / DEEP LEARNING</span><img src="assets/learning.svg" width="640" height="380" alt="神经网络结构及训练曲线概念示意" loading="lazy"><span class="art-caption">DATA → MODEL → EVALUATION</span></div><div class="project-body"><div class="project-meta">深度学习 <span>方案草稿</span></div><h3>视觉模型训练与部署 <span>↗</span></h3><p>围绕可复现训练、误差分析与推理优化，搭建完整的视觉实验流程。</p><div class="tags"><span>Computer Vision</span><span>ONNX</span><span>Model Evaluation</span></div><div class="project-link">查看项目详情 <span>↗</span></div></div></a>
+    </div><p id="filter-status" class="sr-only" role="status" aria-live="polite"></p>
+  </section>
+  <section id="contact" class="section container contact-section" aria-labelledby="contact-title"><div class="section-label"><span>04 / CONTACT</span><span>保持联系</span></div><div class="contact-layout"><div><div class="eyebrow">LET’S CONNECT</div><h2 id="contact-title">下一次探索，<br>从一次交流开始<span class="accent">。</span></h2><p>欢迎交流自动驾驶、具身智能和机器人相关的技术想法。</p></div><div class="contact-links"><a href="https://github.com/zongyunfwx" target="_blank" rel="noopener noreferrer"><span><small>CODE & COLLABORATION</small>GitHub / zongyunfwx</span><span>↗</span></a><div class="contact-pending"><span><small>EMAIL</small>邮箱待补充</span><span class="small-label">COMING SOON</span></div></div></div></section>
+</main>
+<footer class="container site-footer"><span>© <span data-year>2026</span> zongyunfwx</span><span>探索智能，连接现实。</span><a href="#main">回到顶部 ↑</a></footer>
+</body></html>
