@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1014">
+  <meta name="description" content="AeroVLA 开源项目复现：双视角感知、OpenVLA 与 LoRA、无人机连续控制和 AirSim 闭环评估。">
+  <title>AeroVLA · 无人机 VLA 项目复现 · zongyunfwx</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="../"><span class="brand-mark">z/</span>zongyunfwx<span class="accent">.</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" hidden>菜单 ＋</button>
+    <nav id="primary-nav" aria-label="主导航"><a href="../#about">关于</a><a href="../#expertise">技能</a><a href="../#projects">精选项目</a><a class="nav-contact" href="../#contact">联系我 ↗</a></nav>
+  </div></header>
+  <main id="main" class="container">
+    <div class="detail-hero">
+      <div class="breadcrumb"><a href="../">首页</a><span>/</span><a href="../#projects">精选项目</a><span>/</span>AeroVLA</div>
+      <div class="detail-heading">
+        <div class="eyebrow">OPEN-SOURCE REPRODUCTION / UAV NAVIGATION</div>
+        <h1>AeroVLA：从语言指令到自主飞行</h1>
+        <p>围绕无人机视觉语言导航，复现双视角观测到连续飞行控制的端到端流程，理解多模态模型如何连接环境感知与行动。</p>
+        <div class="tags"><span>Vision-Language-Action</span><span>OpenVLA-7B</span><span>LoRA</span><span>AirSim</span><span>TravelUAV</span></div>
+        <div class="hero-actions resource-links">
+          <a class="button primary" href="https://github.com/XuPeng23/AeroVLA" target="_blank" rel="noopener noreferrer">原项目代码 ↗</a>
+          <a class="text-link" href="https://xupeng23.github.io/AeroVLA" target="_blank" rel="noopener noreferrer">原项目主页与演示 ↗</a>
+        </div>
+      </div>
+      <figure class="project-figure teaser-figure">
+        <a href="../assets/aerovla/teaser.png" target="_blank" rel="noopener noreferrer" aria-label="在新标签页查看 AeroVLA 项目概览原图"><img src="../assets/aerovla/teaser.png" width="2270" height="945" alt="AeroVLA 原项目概览：模糊方向提示、前视与下视感知、三自由度控制与内生降落信号。" decoding="async"></a>
+        <figcaption>原项目概览图 · 来源：XuPeng23/AeroVLA，非个人复现实验截图。点击图片查看原图。</figcaption>
+      </figure>
+      <div class="detail-meta"><span><strong>DOMAIN</strong>VLA / 无人机导航</span><span><strong>ROLE</strong>开源项目复现</span><span><strong>STATUS</strong>复现记录 · 实验结果待补充</span></div>
+    </div>
+    <div class="detail-content">
+      <nav class="detail-aside" aria-label="项目目录"><p>ON THIS PAGE</p><a href="#overview">01 项目与个人定位</a><a href="#approach">02 核心技术</a><a href="#reproduction">03 复现路线</a><a href="#evaluation">04 评估与进展</a><a href="#sources">05 来源与资料</a></nav>
+      <div class="detail-copy">
+        <div class="status-box"><p>个人角色：开源项目复现。本页根据原仓库文档与代码整理技术路线；原方法及插图归原作者所有。个人运行环境、实验日志与指标尚待补充。</p></div>
+        <section id="overview">
+          <h2>01 / 项目与个人定位</h2>
+          <p>AeroVLA 研究无人机在三维场景中的视觉语言导航：结合相机观测、目标描述与方向提示，预测飞行控制量和降落信号。原项目基于 OpenVLA，提供训练、模型推理、AirSim 闭环评估及指标统计代码。</p>
+          <p>我的工作以复现为主，关注数据如何组织、视觉与语言如何进入模型、输出如何解析为控制，以及如何在一致的评估设置下检查结果。这里将持续补充可复查的配置、轨迹和失败案例。</p>
+        </section>
+        <section id="approach">
+          <h2>02 / 核心技术</h2>
+          <div class="pipeline" aria-label="AeroVLA 推理流程"><span>前视 + 下视图像</span><b aria-hidden="true">＋</b><span>目标描述 / 方向提示</span><b aria-hidden="true">→</b><span>VLA 策略</span><b aria-hidden="true">→</b><span>飞行动作 / LAND</span></div>
+          <ul>
+            <li><strong>双视角视觉输入：</strong>前视与下视图像纵向拼接，将航行场景与地面目标信息共同送入视觉处理流程。</li>
+            <li><strong>方向提示：</strong>当前代码利用自机位置、姿态和目标位置计算机体坐标系下的相对方位，转成自然语言方向提示。复现时需明确目标位置的来源和可用条件。</li>
+            <li><strong>LoRA 微调：</strong>训练入口加载 OpenVLA-7B，通过 LoRA 调整模型，并将视觉投影层纳入训练保存配置。</li>
+            <li><strong>统一动作表示：</strong>前向位移、垂直位移和偏航变化量被量化为数字文本，推理后反量化，并结合 LAND 信号进行动作执行与降落判断。</li>
+          </ul>
+          <figure class="project-figure">
+            <a href="../assets/aerovla/pipeline.png" target="_blank" rel="noopener noreferrer" aria-label="在新标签页查看 AeroVLA 方法架构原图"><img src="../assets/aerovla/pipeline.png" width="1360" height="869" alt="原项目架构：方向语言提示、双视角图像、LoRA 模型和动作反量化与降落流程。" loading="lazy" decoding="async"></a>
+            <figcaption>原项目方法图，图中保留旧名称 AerialVLA。来源：XuPeng23/AeroVLA。点击查看原图。</figcaption>
+          </figure>
+        </section>
+        <section id="reproduction">
+          <h2>03 / 复现路线</h2>
+          <p>以下是围绕现有代码整理的复现步骤，完成情况将以实际运行记录为准。</p>
+          <ol>
+            <li><strong>环境与数据准备：</strong>记录 Python、PyTorch、CUDA 和设备版本，准备 OpenVLA 基础权重、LoRA 权重、TravelUAV 数据与 AirSim 场景，生成评估所需的 merged_data.json。</li>
+            <li><strong>输入与动作核对：</strong>沿数据集、模型包装器与环境接口检查双视角拼接、提示构造、量化范围、坐标系及降落条件。</li>
+            <li><strong>单场景闭环评估：</strong>配置地图、模型路径和仿真端口，检查“观测 → 预测 → 执行 → 状态更新”循环，保存轨迹与失败片段。</li>
+            <li><strong>分组统计：</strong>扩展到已见场景、未见目标与未见地图，对比原项目对应设置，记录样本数和评估配置。</li>
+          </ol>
+          <div class="status-box"><p><strong>代码核对笔记：</strong>当前 eval_aerovla.sh 默认输出到 aero_vla，而 metric.sh 将 MODEL_NAME 写为 aerial_vla，且未读取命令行模型名参数。汇总前应将两者对齐，避免统计到错误目录。</p></div>
+          <p>主要阅读入口：<code>src/aerovla_dataset.py</code>、<code>src/train_aerovla.py</code>、<code>src/model_wrapper/aerovla_wrapper_ui.py</code>、<code>src/vlnce_src/eval_aerovla.py</code>。</p>
+        </section>
+        <section id="evaluation">
+          <h2>04 / 评估与进展</h2>
+          <p>原项目提供 SR、OSR、NE、SPL 的统计流程。本页尚未录入个人复现结果，不将原论文的表现作为个人实验成果。</p>
+          <table class="evaluation-table"><thead><tr><th scope="col">评估划分</th><th scope="col">记录内容</th><th scope="col">个人结果</th></tr></thead><tbody>
+            <tr><td>已见场景</td><td>SR / OSR / NE / SPL、地图与任务数</td><td>待补充</td></tr>
+            <tr><td>未见目标</td><td>目标变化下的导航与降落表现</td><td>待补充</td></tr>
+            <tr><td>未见地图</td><td>新环境中的任务完成与失败案例</td><td>待补充</td></tr>
+          </tbody></table>
+          <p>接下来补充：运行环境与配置、评估日志、实际轨迹或演示，以及和原项目设置差异的说明。</p>
+        </section>
+        <section id="sources">
+          <h2>05 / 来源与资料</h2>
+          <p>原项目作者：Peng Xu、Zhengnan Deng、Jiayan Deng、Zonghua Gu、Shaohua Wan。技术介绍与图片来自原仓库，本页个人角色为复现。</p>
+          <ul class="source-links">
+            <li><a href="https://github.com/XuPeng23/AeroVLA" target="_blank" rel="noopener noreferrer">AeroVLA 原仓库 ↗</a></li>
+            <li><a href="https://xupeng23.github.io/AeroVLA" target="_blank" rel="noopener noreferrer">原项目主页与视频演示 ↗</a></li>
+            <li><a href="https://arxiv.org/abs/2603.14363" target="_blank" rel="noopener noreferrer">原论文 · arXiv:2603.14363 ↗</a></li>
+            <li><a href="../assets/aerovla/ATTRIBUTION.md">图片来源说明</a> · <a href="../assets/aerovla/LICENSE.txt">原仓库 Apache-2.0 许可证</a></li>
+          </ul>
+        </section>
+        <div class="detail-next"><a href="../#projects">← 返回全部项目</a><a href="vision-language-action.html">继续探索：视觉语言动作模型 ↗</a></div>
+      </div>
+    </div>
+  </main>
+  <footer class="container site-footer"><span>© <span data-year>2026</span> zongyunfwx</span><span>探索智能，连接现实。</span><a href="#main">回到顶部 ↑</a></footer>
+</body>
+</html>

@@ -12,12 +12,14 @@
 ├── assets/
 │   ├── style.css                      # 共享样式、响应式布局与减少动态效果设置
 │   ├── main.js                        # 手机菜单、项目筛选与年份
+│   ├── aerovla/                        # 原项目插图、来源与许可证
 │   ├── favicon.svg
 │   ├── autonomy.svg                   # 自动驾驶概念图
 │   ├── vla.svg                        # 视觉语言动作概念图
 │   ├── navigation.svg                 # 路径规划概念图
 │   └── learning.svg                   # 网络与训练曲线概念图
 ├── projects/
+│   ├── aerovla.html                    # AeroVLA 开源项目复现
 │   ├── autonomous-driving.html
 │   ├── vision-language-action.html
 │   ├── robot-navigation.html
@@ -48,7 +50,12 @@ python -m http.server 8000 --bind 127.0.0.1
 
 - `index.html`：修改显示名称、个人介绍、技术方向，以及首页项目摘要。
 - 联系方式：GitHub 使用与仓库对应的 `zongyunfwx` 账号；邮箱尚未提供，显示为“邮箱待补充”。确认邮箱后，可将该行替换为 `mailto:你的邮箱` 链接。
-- `projects/*.html`：当前为明确标注的方案草稿，补充实际背景、个人职责、代码仓库、演示材料、数据来源、实验环境与真实结果后，再修改状态说明。不要把计划指标当作实测成果。
+- `projects/aerovla.html`：AeroVLA 开源项目复现，包含技术路线、复现步骤、代码核对笔记、评估记录及原项目链接。个人角色为复现，实验结果待补充。
+- 其余 `projects/*.html`：当前为明确标注的方案草稿，补充实际背景、个人职责、代码仓库、演示材料、数据来源、实验环境与真实结果后，再修改状态说明。不要把计划指标当作实测成果。
 - SVG 均为可编辑的概念示意图，训练曲线不是实际实验数据；可替换为真实截图或实验图，并更新 `alt` 描述。
 - 增加项目时复制一个详情页，并在首页添加对应卡片；如新增分类，同步补充筛选按钮的 `data-filter` 与卡片的 `data-category`。
 - 所有内部地址使用相对路径，方便 GitHub Pages 根站点或项目子路径部署。
+
+## AeroVLA 项目来源
+
+AeroVLA 内容依据本地参考仓库版本 `b87aaa7` 的 README 与代码整理，原项目为 [XuPeng23/AeroVLA](https://github.com/XuPeng23/AeroVLA)。图片原样保存在 `assets/aerovla/`，附来源说明与原仓库 Apache-2.0 许可证。图片和原项目方法归原作者所有，个人实验记录应与原作者结果区分。未复制模型、数据集或运行代码，也不会在网站中执行模型推理。
