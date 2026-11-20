@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1014">
+  <meta name="description" content="以函数迭代和 Chebyshev 拟合研究姿态、速度、位置的高阶导航积分。">
+  <title>高精度惯导解算-Picard-Chebyshev 函数迭代导航解算 · zongyunfwx</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header"><div class="container header-inner"><a class="brand" href="../"><span class="brand-mark">z/</span>zongyunfwx<span class="accent">.</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" hidden>菜单 ＋</button><nav id="primary-nav" aria-label="主导航"><a href="../#about">关于</a><a href="../#expertise">技能</a><a href="../#projects">精选项目</a><a class="nav-contact" href="../#contact">联系我 ↗</a></nav></div></header>
+  <main id="main" class="container">
+    <div class="detail-hero">
+      <div class="breadcrumb"><a href="../">首页</a><span>/</span><a href="../#projects">项目作品</a></div>
+      <div class="detail-heading">
+        <div class="eyebrow">导航与状态估计</div>
+        <h1>高精度惯导解算-Picard-Chebyshev 函数迭代导航解算</h1>
+        <p>以函数迭代和 Chebyshev 拟合研究姿态、速度、位置的高阶导航积分。</p>
+        <div class="tags"><span>Picard-Chebyshev</span><span>INS</span><span>Simulation</span></div>
+      </div>
+      <div class="project-outcome">锥运动仿真与方法对比</div>
+    </div>
+    <div class="detail-content">
+      <nav class="detail-aside" aria-label="项目目录">
+        <p>项目内容</p>
+        <a href="#implementation">技术实践</a>
+        <a href="#media">项目图片</a>
+        <a href="../#projects">全部项目</a>
+      </nav>
+      <div class="detail-copy">
+        <section id="implementation">
+          <h2>技术实践</h2>
+          <ul class="implementation-list">
+            <li>面向高精度捷联惯导，设计基于 <strong>Picard-Chebyshev 函数迭代</strong>的导航解算算法，实现姿态、速度与位置的高阶积分，<strong>数值解算精度达机器精度</strong>；</li><li>基于 <strong>Chebyshev 多项式</strong>拟合角速度与比力，构建导航状态系数递推关系，抑制<strong>圆锥、划桨效应</strong>引起的积分误差和不可交换性误差，结合截断阶数与收敛判据控制计算开销；</li><li>搭建锥运动仿真，对比传统捷联解算与 Runge-Kutta 方法，评估姿态、速度与位置误差及运行耗时，验证算法精度与动态适应性。</li>
+          </ul>
+
+        </section>
+        <section id="media">
+          <h2>项目图片</h2>
+          <figure class="project-figure project-media">
+            <a href="../assets/picard-chebyshev/demo.png" target="_blank" rel="noopener noreferrer"><img src="../assets/picard-chebyshev/demo.png" width="1791" height="1174" alt="高精度惯导解算-Picard-Chebyshev 函数迭代导航解算项目图片" loading="lazy" decoding="async"></a>
+            <figcaption>点击图片查看原图。</figcaption>
+          </figure>
+        </section>
+
+        <div class="detail-next">
+          <a href="imu-ahrs.html">上一个项目 · 捷联式惯性导航-九轴 IMU 姿态解算与系统开发</a>
+          <a href="fpga-fir.html">下一个项目 · FPGA数字信号处理-基于 Verilog 的 FIR 滤波器设计与仿真</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="container site-footer"><span>© <span data-year>2026</span> zongyunfwx</span><span>探索智能，连接现实。</span><a href="#main">回到顶部 ↑</a></footer>
+</body>
+</html>

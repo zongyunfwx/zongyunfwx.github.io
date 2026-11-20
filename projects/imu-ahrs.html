@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1014">
+  <meta name="description" content="九轴驱动、四元数融合和异常拒绝，连接传感采集与高频姿态输出。">
+  <title>捷联式惯性导航-九轴 IMU 姿态解算与系统开发 · zongyunfwx</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header"><div class="container header-inner"><a class="brand" href="../"><span class="brand-mark">z/</span>zongyunfwx<span class="accent">.</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" hidden>菜单 ＋</button><nav id="primary-nav" aria-label="主导航"><a href="../#about">关于</a><a href="../#expertise">技能</a><a href="../#projects">精选项目</a><a class="nav-contact" href="../#contact">联系我 ↗</a></nav></div></header>
+  <main id="main" class="container">
+    <div class="detail-hero">
+      <div class="breadcrumb"><a href="../">首页</a><span>/</span><a href="../#projects">项目作品</a></div>
+      <div class="detail-heading">
+        <div class="eyebrow">导航与状态估计</div>
+        <h1>捷联式惯性导航-九轴 IMU 姿态解算与系统开发</h1>
+        <p>九轴驱动、四元数融合和异常拒绝，连接传感采集与高频姿态输出。</p>
+        <div class="tags"><span>CH32V307</span><span>ICM20948</span><span>AHRS</span></div>
+      </div>
+      <div class="project-outcome">500 Hz 姿态更新</div>
+    </div>
+    <div class="detail-content">
+      <nav class="detail-aside" aria-label="项目目录">
+        <p>项目内容</p>
+        <a href="#implementation">技术实践</a>
+        <a href="#media">项目图片</a>
+        <a href="../#projects">全部项目</a>
+      </nav>
+      <div class="detail-copy">
+        <section id="implementation">
+          <h2>技术实践</h2>
+          <ul class="implementation-list">
+            <li>基于 <strong>CH32V307VCT6 与 ICM20948</strong> 搭建九轴姿态测量系统，完成传感器驱动、数据采集、融合解算及串口输出的嵌入式开发；</li><li>开发 <strong>SPI 连续读写</strong>与寄存器分区管理，通过片内 AUX I²C 驱动 AK09916 磁力计，完成九轴数据解析、量程配置与物理量转换；</li><li>实现<strong>基于四元数的九轴 AHRS 姿态融合算法</strong>，融合陀螺仪、加速度计及磁力计数据，设计陀螺零偏在线估计与加速度、磁场异常拒绝机制；</li><li>基于 <strong>TIM1 定时中断实现 500Hz 姿态更新</strong>，输出横滚角、俯仰角、航向角及地理坐标系去重力加速度，通过串口完成姿态数据输出与调试。</li>
+          </ul>
+
+        </section>
+        <section id="media">
+          <h2>项目图片</h2>
+          <figure class="project-figure project-media">
+            <a href="../assets/imu-ahrs/demo.png" target="_blank" rel="noopener noreferrer"><img src="../assets/imu-ahrs/demo.png" width="1150" height="700" alt="捷联式惯性导航-九轴 IMU 姿态解算与系统开发项目图片" loading="lazy" decoding="async"></a>
+            <figcaption>点击图片查看原图。</figcaption>
+          </figure>
+        </section>
+
+        <div class="detail-next">
+          <a href="dual-car.html">上一个项目 · 电子设计竞赛-双车视觉循迹与协同控制</a>
+          <a href="picard-chebyshev.html">下一个项目 · 高精度惯导解算-Picard-Chebyshev 函数迭代导航解算</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="container site-footer"><span>© <span data-year>2026</span> zongyunfwx</span><span>探索智能，连接现实。</span><a href="#main">回到顶部 ↑</a></footer>
+</body>
+</html>

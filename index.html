@@ -12,30 +12,259 @@
 <main id="main">
   <section class="hero container" aria-labelledby="hero-title">
     <div><div class="eyebrow"><span class="status-dot"></span> AI ALGORITHM ENGINEERING</div><h1 id="hero-title">让智能走出模型，<br>走向<span class="accent">真实世界。</span></h1><p class="hero-description">你好，我是 <strong>zongyunfwx</strong>。<br>关注自动驾驶、具身智能与机器人导航，<br>探索从环境感知到自主决策的完整链路。</p><div class="hero-actions"><a class="button primary" href="#projects">探索我的项目 <span>↗</span></a><a class="text-link" href="https://github.com/zongyunfwx" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><div class="hero-topics">PERCEPTION <i>/</i> REASONING <i>/</i> ACTION</div></div>
-    <div class="hero-visual"><div class="visual-topline"><span><span class="status-dot"></span> AUTONOMOUS SYSTEM</span><span>FIG. 01</span></div><img src="assets/autonomy.svg" width="640" height="460" alt="自动驾驶概念示意：车辆根据环境信息沿预测轨迹行驶。"><div class="visual-bottom"><span>感知世界 · 理解场景 · 生成行动</span><span class="accent">[ x, y, θ ]</span></div></div>
+    <div class="hero-visual portfolio-hero-image"><img src="assets/autonomous-driving/demo.png" width="2490" height="1361" alt="自动驾驶决策规划项目图片"><div class="visual-bottom">自动驾驶 · 生成式轨迹规划</div></div>
     <div class="hero-footer"><span>以算法理解世界，以工程连接现实。</span><a href="#about">向下探索 ↓</a></div>
   </section>
-  <section id="about" class="section container" aria-labelledby="about-title"><div class="section-label"><span>01 / ABOUT</span><span>关于我</span></div><div class="about-content"><h2 id="about-title">在感知与行动之间，<br>构建智能的连接。</h2><div><p>我关注 AI 算法如何在复杂的物理环境中发挥作用：从视觉感知与场景表征，到多模态理解、轨迹规划和机器人控制。</p><p>这里记录我的技术探索与项目思路。希望用清晰的问题定义、可复现的实验和完整的工程实践，逐步连接模型能力与实际任务。</p><a class="inline-link" href="#projects">查看研究与实践方向 ↗</a></div></div><div class="focus-strip"><span class="mono">RESEARCH FOCUS</span><span>自动驾驶</span><span>Vision · Language · Action</span><span>机器人导航</span><span>深度学习</span></div></section>
+  <section id="about" class="section container" aria-labelledby="about-title"><div class="section-label"><span>01 / ABOUT</span><span>关于我</span></div><div class="about-content"><h2 id="about-title">在感知与行动之间，<br>构建智能的连接。</h2><div><p>我的项目覆盖自动驾驶决策规划、视觉语言导航、世界模型、大模型后训练，以及嵌入式视觉和导航系统开发。</p><p>从 PyTorch 模型训练到 C/C++ 工程实现，从仿真闭环到 MCU 端侧部署，这里汇集算法设计、实验验证与系统开发中的实践。</p><a class="inline-link" href="#projects">查看研究与实践方向 ↗</a></div></div><div class="focus-strip"><span class="mono">RESEARCH FOCUS</span><span>自动驾驶</span><span>Vision · Language · Action</span><span>机器人导航</span><span>深度学习</span></div></section>
   <section id="expertise" class="section container" aria-labelledby="expertise-title"><div class="section-label"><span>02 / EXPERTISE</span><span>技术方向</span></div><div class="section-heading"><h2 id="expertise-title">从模型到系统的技术视角</h2><p>围绕智能系统的四个核心环节展开探索。</p></div><div class="skills-grid">
     <article class="skill"><span class="skill-number">01</span><h3>环境感知与表征</h3><p>视觉特征提取、多传感器融合与空间表征，让模型理解周围环境。</p><div class="tags"><span>Computer Vision</span><span>BEV</span><span>Sensor Fusion</span></div></article>
     <article class="skill"><span class="skill-number">02</span><h3>多模态与具身智能</h3><p>探索视觉、语言与动作的对齐，让任务意图转化为可执行的行动。</p><div class="tags"><span>VLM / VLA</span><span>Transformer</span><span>Imitation Learning</span></div></article>
     <article class="skill"><span class="skill-number">03</span><h3>规划、导航与控制</h3><p>连接定位建图、路径搜索和局部避障，关注动态环境下的决策。</p><div class="tags"><span>SLAM</span><span>Path Planning</span><span>ROS 2</span></div></article>
     <article class="skill"><span class="skill-number">04</span><h3>训练、评估与部署</h3><p>重视数据质量、实验对比和推理效率，让每一次模型迭代有据可循。</p><div class="tags"><span>Python / C++</span><span>PyTorch</span><span>ONNX</span></div></article>
-  </div><p class="content-note">以上为关注与学习方向；具体技术实践以项目记录为准。</p></section>
-  <section id="projects" class="section container" aria-labelledby="projects-title"><div class="section-label"><span>03 / SELECTED WORK</span><span>精选项目</span></div><div class="section-heading"><div><h2 id="projects-title">面向真实世界的算法探索</h2><p>从开源项目复现到算法方案，串联感知、理解与行动。</p></div><span class="small-label">PROJECT INDEX / 01—05</span></div><p class="project-notice">AeroVLA 为开源项目复现记录；其余项目为方向方案草稿。个人实验结果持续补充。</p>
-    <div class="project-filters" role="group" aria-label="筛选项目" hidden><button class="active" data-filter="all" aria-pressed="true">全部项目 <span>05</span></button><button data-filter="driving" aria-pressed="false">自动驾驶</button><button data-filter="vla" aria-pressed="false">VLA</button><button data-filter="robotics" aria-pressed="false">机器人导航</button><button data-filter="learning" aria-pressed="false">深度学习</button></div>
-    <div class="projects-grid">
-      <a class="project-card project-featured" href="projects/aerovla.html" data-category="vla">
-        <div class="project-art art-aerovla"><span class="art-label">FEATURED / UAV NAVIGATION</span><img src="assets/aerovla/pipeline.png" width="1360" height="869" alt="AeroVLA 原项目架构：双视角与语言输入生成飞行动作。" loading="lazy" decoding="async"><span class="art-caption">DUAL-VIEW → VLA → FLIGHT CONTROL</span></div>
-        <div class="project-body"><div class="project-meta">VLA / 无人机导航 <span>开源项目复现</span></div><h3>AeroVLA <span>↗</span></h3><p>从双视角感知与语言提示到连续飞行控制，围绕 OpenVLA、LoRA 与 AirSim 闭环评估展开复现。</p><div class="tags"><span>OpenVLA-7B</span><span>LoRA</span><span>AirSim</span><span>TravelUAV</span></div><p class="reproduction-credit">原项目：XuPeng23/AeroVLA · 个人实验结果待补充</p><div class="project-link">查看复现记录 <span>↗</span></div></div>
+  </div><p class="content-note">技术实践与实验结果可在下方项目中查看。</p></section>
+  <section id="projects" class="section container" aria-labelledby="projects-title">
+    <div class="section-label"><span>PROJECTS</span><span>项目作品</span></div>
+    <div class="section-heading"><div><h2 id="projects-title">从算法研究到系统落地</h2><p>自动驾驶、具身导航、大模型训练与软硬件开发，共 21 个项目。</p></div></div>
+    <div class="project-filters" role="group" aria-label="筛选项目" hidden>
+      <button class="active" data-filter="all" aria-pressed="true">全部项目 <span>21</span></button><button data-filter="driving" aria-pressed="false">自动驾驶</button><button data-filter="embodied" aria-pressed="false">具身导航 / VLA</button><button data-filter="vision" aria-pressed="false">视觉与端侧部署</button><button data-filter="learning" aria-pressed="false">大模型与强化学习</button><button data-filter="navigation" aria-pressed="false">导航与状态估计</button><button data-filter="embedded" aria-pressed="false">竞赛与嵌入式</button><button data-filter="software" aria-pressed="false">软件与工具</button>
+    </div>
+    <div class="projects-grid catalog-grid">
+      <a class="project-card catalog-card" href="projects/autonomous-driving.html" data-category="driving">
+        <div class="project-art catalog-art"><img src="assets/autonomous-driving/demo.png" width="2490" height="1361" alt="自动驾驶端到端决策规划算法项目图片" loading="lazy" decoding="async"></div>
+        <div class="project-body">
+          <div class="project-meta">自动驾驶</div>
+          <h3>自动驾驶端到端决策规划算法</h3>
+          <p>从结构化感知与高精地图，到生成式轨迹规划、世界模型融合与交通灯决策。</p>
+          <div class="tags"><span>Transformer</span><span>Flow Matching</span><span>DiT</span></div>
+          <div class="card-outcome">推理步数 20 → 6</div>
+          <div class="project-link">查看项目详情</div>
+        </div>
       </a>
-      <a class="project-card" href="projects/autonomous-driving.html" data-category="driving"><div class="project-art art-driving"><span class="art-label">01 / AUTONOMOUS DRIVING</span><img src="assets/autonomy.svg" width="640" height="460" alt="自动驾驶轨迹规划示意" loading="lazy"><span class="art-caption">PERCEPTION → PLANNING → CONTROL</span></div><div class="project-body"><div class="project-meta">自动驾驶 <span>方案草稿</span></div><h3>端到端自动驾驶 <span>↗</span></h3><p>从多视角视觉表征到未来轨迹预测，探索感知与规划的联合建模。</p><div class="tags"><span>BEV</span><span>Trajectory Planning</span><span>PyTorch</span></div><div class="project-link">查看项目详情 <span>↗</span></div></div></a>
-      <a class="project-card" href="projects/vision-language-action.html" data-category="vla"><div class="project-art art-vla"><span class="art-label">02 / EMBODIED INTELLIGENCE</span><img src="assets/vla.svg" width="640" height="380" alt="视觉与语言融合后生成机器人动作的示意" loading="lazy"><span class="art-caption">SEE. UNDERSTAND. ACT.</span></div><div class="project-body"><div class="project-meta">VLA / 具身智能 <span>方案草稿</span></div><h3>视觉语言动作模型 <span>↗</span></h3><p>融合视觉观察与自然语言指令，探索面向机器人操作的动作生成。</p><div class="tags"><span>VLA</span><span>Multimodal</span><span>Imitation Learning</span></div><div class="project-link">查看项目详情 <span>↗</span></div></div></a>
-      <a class="project-card" href="projects/robot-navigation.html" data-category="robotics"><div class="project-art art-navigation"><span class="art-label">03 / ROBOT NAVIGATION</span><img src="assets/navigation.svg" width="640" height="380" alt="机器人在地图中绕过障碍到达目标的示意" loading="lazy"><span class="art-caption">MAP → LOCALIZE → NAVIGATE</span></div><div class="project-body"><div class="project-meta">机器人导航 <span>方案草稿</span></div><h3>面向目标的自主导航 <span>↗</span></h3><p>结合空间建图、全局路径规划与局部避障，连接环境理解和自主移动。</p><div class="tags"><span>ROS 2</span><span>SLAM</span><span>Path Planning</span></div><div class="project-link">查看项目详情 <span>↗</span></div></div></a>
-      <a class="project-card" href="projects/deep-learning.html" data-category="learning"><div class="project-art art-learning"><span class="art-label">04 / DEEP LEARNING</span><img src="assets/learning.svg" width="640" height="380" alt="神经网络结构及训练曲线概念示意" loading="lazy"><span class="art-caption">DATA → MODEL → EVALUATION</span></div><div class="project-body"><div class="project-meta">深度学习 <span>方案草稿</span></div><h3>视觉模型训练与部署 <span>↗</span></h3><p>围绕可复现训练、误差分析与推理优化，搭建完整的视觉实验流程。</p><div class="tags"><span>Computer Vision</span><span>ONNX</span><span>Model Evaluation</span></div><div class="project-link">查看项目详情 <span>↗</span></div></div></a>
-    </div><p id="filter-status" class="sr-only" role="status" aria-live="polite"></p>
+      <a class="project-card catalog-card" href="projects/robot-navigation.html" data-category="embodied">
+        <div class="project-art catalog-art"><img src="assets/robot-navigation/demo.png" width="1327" height="751" alt="具身智能VLN-世界模型导航算法研究-Waypoint方案项目图片" loading="lazy" decoding="async"></div>
+        <div class="project-body">
+          <div class="project-meta">具身导航</div>
+          <h3>具身智能VLN-世界模型导航算法研究-Waypoint方案</h3>
+          <p>用空间地图、全局拓扑图和世界模型连接 Waypoint 规划与导航决策。</p>
+          <div class="tags"><span>Habitat-R2R</span><span>World Model</span><span>Waypoint</span></div>
+          <div class="card-outcome">SR +8.1% / SPL +6.3%</div>
+          <div class="project-link">查看项目详情</div>
+        </div>
+      </a>
+      <a class="project-card catalog-card" href="projects/vision-language-action.html" data-category="embodied">
+        <div class="project-art catalog-art"><img src="assets/vision-language-action/demo.png" width="1342" height="715" alt="具身智能VLN-VLM微调-视觉语言导航-action方案项目图片" loading="lazy" decoding="async"></div>
+        <div class="project-body">
+          <div class="project-meta">具身导航</div>
+          <h3>具身智能VLN-VLM微调-视觉语言导航-action方案</h3>
+          <p>基于 Qwen3.5-4B 的 NavGPT 复现与优化，在 Habitat MP3D 中完成导航闭环。</p>
+          <div class="tags"><span>Qwen3.5-4B</span><span>LoRA</span><span>NavGPT</span></div>
+          <div class="card-outcome">SR +20.1% / SPL +12.3%</div>
+          <div class="project-link">查看项目详情</div>
+        </div>
+      </a>
+      <a class="project-card catalog-card" href="projects/aerovla.html" data-category="embodied">
+        <div class="project-art catalog-art"><img src="assets/aerovla/demo.png" width="580" height="416" alt="无人机VLN-视觉语言导航与连续控制系统项目图片" loading="lazy" decoding="async"></div>
+        <div class="project-body">
+          <div class="project-meta">具身导航</div>
+          <h3>无人机VLN-视觉语言导航与连续控制系统</h3>
+          <p>复现无人机视觉语言动作系统，贯通双视角感知、动态方向提示与连续控制。</p>
+          <div class="tags"><span>OpenVLA-7B</span><span>LoRA</span><span>AirSim</span></div>
+          <div class="card-outcome">开源项目复现</div>
+          <div class="project-link">查看项目详情</div>
+        </div>
+      </a>
+      <a class="project-card catalog-card" href="projects/thermal-gesture.html" data-category="vision">
+        <div class="project-art catalog-art"><img src="assets/thermal-gesture/demo.png" width="2051" height="1154" alt="嵌入式视觉-热成像手势识别算法及端侧部署项目图片" loading="lazy" decoding="async"></div>
+        <div class="project-body">
+          <div class="project-meta">视觉与端侧部署</div>
+          <h3>嵌入式视觉-热成像手势识别算法及端侧部署</h3>
+          <p>从热成像数据处理与 CNN 建模，到轻量化、C 语言移植和 MCU 实时推理。</p>
+          <div class="tags"><span>STM32H7</span><span>PyTorch</span><span>CNN</span></div>
+          <div class="card-outcome">32 FPS / 准确率 90%+</div>
+          <div class="project-link">查看项目详情</div>
+        </div>
+      </a>
+      <a class="project-card catalog-card" href="projects/medical-grpo.html" data-category="learning">
+        <div class="project-art catalog-art"><img src="assets/medical-grpo/demo.png" width="2160" height="1440" alt="大模型后训练-Qwen2.5-3B医疗知识GRPO强化学习项目图片" loading="lazy" decoding="async"></div>
+        <div class="project-body">
+          <div class="project-meta">大模型与强化学习</div>
+          <h3>大模型后训练-Qwen2.5-3B医疗知识GRPO强化学习</h3>
+          <p>搭建医学问答后训练流程，以语义、流畅度和标签规则构建复合奖励。</p>
+          <div class="tags"><span>Qwen2.5-3B</span><span>GRPO</span><span>Unsloth</span></div>
+          <div class="card-outcome">标签完整率 30.3% → 100%</div>
+          <div class="project-link">查看项目详情</div>
+        </div>
+      </a>
+      <a class="project-card catalog-card" href="projects/ppo-cartpole.html" data-category="learning">
+        <div class="project-art catalog-art"><div class="video-card-preview"><video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1"><source src="assets/ppo-cartpole/demo.mp4" type="video/mp4"></video><span>视频演示 · 查看项目</span></div></div>
+        <div class="project-body">
+          <div class="project-meta">大模型与强化学习</div>
+          <h3>强化学习-PPO 策略优化与 CartPole 控制</h3>
+          <p>独立实现 Actor–Critic、在线采样与 PPO-Clip，在 CartPole-v1 中验证策略收敛。</p>
+          <div class="tags"><span>PyTorch</span><span>PPO</span><span>GAE</span></div>
+          <div class="card-outcome">末 20 回合平均回报 500</div>
+          <div class="project-link">查看项目详情</div>
+        </div>
+      </a>
+      <a class="project-card catalog-card" href="projects/world-model-control.html" data-category="learning">
+        <div class="project-art catalog-art"><div class="video-card-preview"><video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1"><source src="assets/world-model-control/demo.mp4" type="video/mp4"></video><span>视频演示 · 查看项目</span></div></div>
+        <div class="project-body">
+          <div class="project-meta">大模型与强化学习</div>
+          <h3>基于世界模型的cartpole-swingup连续控制与在线规划</h3>
+          <p>联合学习隐空间动力学与奖励，通过 MPPI 在线规划完成连续控制。</p>
+          <div class="tags"><span>World Model</span><span>MPPI</span><span>PyTorch</span></div>
+          <div class="card-outcome">50 万环境步训练流程</div>
+          <div class="project-link">查看项目详情</div>
+        </div>
+      </a>
+      <a class="project-card catalog-card" href="projects/deep-learning.html" data-category="vision">
+        <div class="project-art catalog-art"><img src="assets/deep-learning/demo.png" width="665" height="471" alt="计算机视觉-基于 CNN 的手语字母识别项目图片" loading="lazy" decoding="async"></div>
+        <div class="project-body">
+          <div class="project-meta">视觉与端侧部署</div>
+          <h3>计算机视觉-基于 CNN 的手语字母识别</h3>
+          <p>从 24 类手语字母分类训练，到摄像头逐帧识别与置信度显示。</p>
+          <div class="tags"><span>CNN</span><span>Sign MNIST</span><span>OpenCV</span></div>
+          <div class="card-outcome">测试准确率 95.78%</div>
+          <div class="project-link">查看项目详情</div>
+        </div>
+      </a>
+      <a class="project-card catalog-card" href="projects/neural-kalman.html" data-category="navigation">
+        <div class="project-art catalog-art"><img src="assets/neural-kalman/demo.png" width="1503" height="1327" alt="智能状态估计-基于 GRU 的自适应卡尔曼滤波项目图片" loading="lazy" decoding="async"></div>
+        <div class="project-body">
+          <div class="project-meta">导航与状态估计</div>
+          <h3>智能状态估计-基于 GRU 的自适应卡尔曼滤波</h3>
+          <p>结合状态空间先验与三路 GRU 增益估计，完成含噪时序信号的递推滤波。</p>
+          <div class="tags"><span>GRU</span><span>Kalman Filter</span><span>PyTorch</span></div>
+          <div class="card-outcome">3,000 步非线性轨迹测试</div>
+          <div class="project-link">查看项目详情</div>
+        </div>
+      </a>
+      <a class="project-card catalog-card" href="projects/agent-harness.html" data-category="learning">
+        <div class="project-art catalog-art"><img src="assets/agent-harness/demo.png" width="1448" height="1086" alt="大模型应用-Agent Harness 搭建项目图片" loading="lazy" decoding="async"></div>
+        <div class="project-body">
+          <div class="project-meta">大模型与强化学习</div>
+          <h3>大模型应用-Agent Harness 搭建</h3>
+          <p>连接模型决策、工具执行与结果回传，集成技能加载、上下文压缩和多 Agent 协作。</p>
+          <div class="tags"><span>Agent Harness</span><span>FastAPI</span><span>Qwen3.5-4B</span></div>
+          <div class="card-outcome">工具调用闭环</div>
+          <div class="project-link">查看项目详情</div>
+        </div>
+      </a>
+      <a class="project-card catalog-card" href="projects/smart-car.html" data-category="embedded">
+        <div class="project-art catalog-art"><img src="assets/smart-car/demo.png" width="1133" height="820" alt="智能汽车竞赛-多传感器融合定位与自主导航项目图片" loading="lazy" decoding="async"></div>
+        <div class="project-body">
+          <div class="project-meta">竞赛与嵌入式</div>
+          <h3>智能汽车竞赛-多传感器融合定位与自主导航</h3>
+          <p>融合 GPS、里程计与 IMU，完成车载定位、实时控制和高速自主循迹。</p>
+          <div class="tags"><span>MM32F527X</span><span>Kalman</span><span>PID</span></div>
+          <div class="card-outcome">国家二等奖 / 浙江省一等奖</div>
+          <div class="project-link">查看项目详情</div>
+        </div>
+      </a>
+      <a class="project-card catalog-card" href="projects/dual-car.html" data-category="embedded">
+        <div class="project-art catalog-art"><img src="assets/dual-car/demo.png" width="655" height="712" alt="电子设计竞赛-双车视觉循迹与协同控制项目图片" loading="lazy" decoding="async"></div>
+        <div class="project-body">
+          <div class="project-meta">竞赛与嵌入式</div>
+          <h3>电子设计竞赛-双车视觉循迹与协同控制</h3>
+          <p>结合视觉循迹、超声波测距与车间通信，实现双车跟随和协同控制。</p>
+          <div class="tags"><span>OpenMV</span><span>MSP-EXP432</span><span>OpenCV</span></div>
+          <div class="card-outcome">省二等奖</div>
+          <div class="project-link">查看项目详情</div>
+        </div>
+      </a>
+      <a class="project-card catalog-card" href="projects/imu-ahrs.html" data-category="navigation">
+        <div class="project-art catalog-art"><img src="assets/imu-ahrs/demo.png" width="1150" height="700" alt="捷联式惯性导航-九轴 IMU 姿态解算与系统开发项目图片" loading="lazy" decoding="async"></div>
+        <div class="project-body">
+          <div class="project-meta">导航与状态估计</div>
+          <h3>捷联式惯性导航-九轴 IMU 姿态解算与系统开发</h3>
+          <p>九轴驱动、四元数融合和异常拒绝，连接传感采集与高频姿态输出。</p>
+          <div class="tags"><span>CH32V307</span><span>ICM20948</span><span>AHRS</span></div>
+          <div class="card-outcome">500 Hz 姿态更新</div>
+          <div class="project-link">查看项目详情</div>
+        </div>
+      </a>
+      <a class="project-card catalog-card" href="projects/picard-chebyshev.html" data-category="navigation">
+        <div class="project-art catalog-art"><img src="assets/picard-chebyshev/demo.png" width="1791" height="1174" alt="高精度惯导解算-Picard-Chebyshev 函数迭代导航解算项目图片" loading="lazy" decoding="async"></div>
+        <div class="project-body">
+          <div class="project-meta">导航与状态估计</div>
+          <h3>高精度惯导解算-Picard-Chebyshev 函数迭代导航解算</h3>
+          <p>以函数迭代和 Chebyshev 拟合研究姿态、速度、位置的高阶导航积分。</p>
+          <div class="tags"><span>Picard-Chebyshev</span><span>INS</span><span>Simulation</span></div>
+          <div class="card-outcome">锥运动仿真与方法对比</div>
+          <div class="project-link">查看项目详情</div>
+        </div>
+      </a>
+      <a class="project-card catalog-card" href="projects/fpga-fir.html" data-category="embedded">
+        <div class="project-art catalog-art"><img src="assets/fpga-fir/demo.png" width="1762" height="377" alt="FPGA数字信号处理-基于 Verilog 的 FIR 滤波器设计与仿真项目图片" loading="lazy" decoding="async"></div>
+        <div class="project-body">
+          <div class="project-meta">竞赛与嵌入式</div>
+          <h3>FPGA数字信号处理-基于 Verilog 的 FIR 滤波器设计与仿真</h3>
+          <p>从 FIR 系数设计与定点量化，到对称抽头优化和 HDL 仿真验证。</p>
+          <div class="tags"><span>Verilog</span><span>MATLAB</span><span>ModelSim</span></div>
+          <div class="card-outcome">乘法器 9 → 5</div>
+          <div class="project-link">查看项目详情</div>
+        </div>
+      </a>
+      <a class="project-card catalog-card" href="projects/linux-ins.html" data-category="navigation">
+        <div class="project-art catalog-art"><img src="assets/linux-ins/demo.jpg" width="1706" height="1279" alt="导航系统-基于树莓派 Linux 的惯导测控系统开发项目图片" loading="lazy" decoding="async"></div>
+        <div class="project-body">
+          <div class="project-meta">导航与状态估计</div>
+          <h3>导航系统-基于树莓派 Linux 的惯导测控系统开发</h3>
+          <p>在树莓派上集成惯导采集、伺服电机控制、多线程同步和 GTK 界面。</p>
+          <div class="tags"><span>Linux</span><span>C</span><span>POSIX</span></div>
+          <div class="card-outcome">惯导测控实验平台</div>
+          <div class="project-link">查看项目详情</div>
+        </div>
+      </a>
+      <a class="project-card catalog-card" href="projects/qt-vision.html" data-category="software">
+        <div class="project-art catalog-art"><img src="assets/qt-vision/demo.png" width="2553" height="1112" alt="图像处理与调试-Qt 上位机开发与图像处理算法项目图片" loading="lazy" decoding="async"></div>
+        <div class="project-body">
+          <div class="project-meta">软件与工具</div>
+          <h3>图像处理与调试-Qt 上位机开发与图像处理算法</h3>
+          <p>集成离线图像回放、算法中间过程可视化与控制曲线，支持视觉调试。</p>
+          <div class="tags"><span>C++</span><span>Qt Widgets</span><span>OpenCV</span></div>
+          <div class="card-outcome">图像回放与交互调参</div>
+          <div class="project-link">查看项目详情</div>
+        </div>
+      </a>
+      <a class="project-card catalog-card" href="projects/qt-pet.html" data-category="software">
+        <div class="project-art catalog-art"><div class="video-card-preview"><video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1"><source src="assets/qt-pet/demo.mp4" type="video/mp4"></video><span>视频演示 · 查看项目</span></div></div>
+        <div class="project-body">
+          <div class="project-meta">软件与工具</div>
+          <h3>Qt 桌面宠物-动画渲染、交互设计与 Windows 部署</h3>
+          <p>实现透明桌面窗口、序列帧动画、状态交互与 Windows 应用部署。</p>
+          <div class="tags"><span>C++</span><span>Qt</span><span>QPainter</span></div>
+          <div class="card-outcome">桌面交互与动画演示</div>
+          <div class="project-link">查看项目详情</div>
+        </div>
+      </a>
+      <a class="project-card catalog-card" href="projects/web-automation.html" data-category="software">
+        <div class="project-art catalog-art"><img src="assets/web-automation/demo.png" width="1081" height="675" alt="网络爬虫-平台数据采集与浏览器自动化开发项目图片" loading="lazy" decoding="async"></div>
+        <div class="project-body">
+          <div class="project-meta">软件与工具</div>
+          <h3>网络爬虫-平台数据采集与浏览器自动化开发</h3>
+          <p>围绕结构化数据采集、接口监听和浏览器交互，构建自动化工具。</p>
+          <div class="tags"><span>Requests</span><span>DrissionPage</span><span>Selenium</span></div>
+          <div class="card-outcome">数据采集与浏览器自动化</div>
+          <div class="project-link">查看项目详情</div>
+        </div>
+      </a>
+      <a class="project-card catalog-card" href="projects/sfml-tetris.html" data-category="software">
+        <div class="project-art catalog-art"><div class="video-card-preview"><video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1"><source src="assets/sfml-tetris/demo.mp4" type="video/mp4"></video><span>视频演示 · 查看项目</span></div></div>
+        <div class="project-body">
+          <div class="project-meta">软件与工具</div>
+          <h3>俄罗斯方块-基于 C++ 和 SFML 的桌面游戏开发</h3>
+          <p>完成方块生成、旋转碰撞、计分、音效与游戏存档恢复的桌面游戏。</p>
+          <div class="tags"><span>C++</span><span>SFML</span><span>Visual Studio</span></div>
+          <div class="card-outcome">桌面游戏演示</div>
+          <div class="project-link">查看项目详情</div>
+        </div>
+      </a>
+    </div>
+    <p id="filter-status" class="filter-status" role="status" aria-live="polite">显示全部 21 个项目</p>
+    <div class="other-experience"><h3>其他实践</h3><ul><li>基于 OpenCV 的人脸识别系统</li><li>CAN 总线 / CANopen 协议开发</li><li>局域网 / IPv6 远程桌面工具</li></ul></div>
   </section>
-  <section id="contact" class="section container contact-section" aria-labelledby="contact-title"><div class="section-label"><span>04 / CONTACT</span><span>保持联系</span></div><div class="contact-layout"><div><div class="eyebrow">LET’S CONNECT</div><h2 id="contact-title">下一次探索，<br>从一次交流开始<span class="accent">。</span></h2><p>欢迎交流自动驾驶、具身智能和机器人相关的技术想法。</p></div><div class="contact-links"><a href="https://github.com/zongyunfwx" target="_blank" rel="noopener noreferrer"><span><small>CODE & COLLABORATION</small>GitHub / zongyunfwx</span><span>↗</span></a><div class="contact-pending"><span><small>EMAIL</small>邮箱待补充</span><span class="small-label">COMING SOON</span></div></div></div></section>
+  <section id="contact" class="section container contact-section" aria-labelledby="contact-title"><div class="section-label"><span>04 / CONTACT</span><span>保持联系</span></div><div class="contact-layout"><div><div class="eyebrow">LET’S CONNECT</div><h2 id="contact-title">下一次探索，<br>从一次交流开始<span class="accent">。</span></h2><p>欢迎交流自动驾驶、具身智能和机器人相关的技术想法。</p></div><div class="contact-links"><a href="https://github.com/zongyunfwx" target="_blank" rel="noopener noreferrer"><span><small>CODE & COLLABORATION</small>GitHub / zongyunfwx</span><span>↗</span></a><a href="tel:19941196659"><span><small>PHONE</small>199 4119 6659</span></a></div></div></section>
 </main>
 <footer class="container site-footer"><span>© <span data-year>2026</span> zongyunfwx</span><span>探索智能，连接现实。</span><a href="#main">回到顶部 ↑</a></footer>
 </body></html>

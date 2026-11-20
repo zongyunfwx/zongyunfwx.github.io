@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1014">
+  <meta name="description" content="独立实现 Actor–Critic、在线采样与 PPO-Clip，在 CartPole-v1 中验证策略收敛。">
+  <title>强化学习-PPO 策略优化与 CartPole 控制 · zongyunfwx</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header"><div class="container header-inner"><a class="brand" href="../"><span class="brand-mark">z/</span>zongyunfwx<span class="accent">.</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" hidden>菜单 ＋</button><nav id="primary-nav" aria-label="主导航"><a href="../#about">关于</a><a href="../#expertise">技能</a><a href="../#projects">精选项目</a><a class="nav-contact" href="../#contact">联系我 ↗</a></nav></div></header>
+  <main id="main" class="container">
+    <div class="detail-hero">
+      <div class="breadcrumb"><a href="../">首页</a><span>/</span><a href="../#projects">项目作品</a></div>
+      <div class="detail-heading">
+        <div class="eyebrow">大模型与强化学习</div>
+        <h1>强化学习-PPO 策略优化与 CartPole 控制</h1>
+        <p>独立实现 Actor–Critic、在线采样与 PPO-Clip，在 CartPole-v1 中验证策略收敛。</p>
+        <div class="tags"><span>PyTorch</span><span>PPO</span><span>GAE</span></div>
+      </div>
+      <div class="project-outcome">末 20 回合平均回报 500</div>
+    </div>
+    <div class="detail-content">
+      <nav class="detail-aside" aria-label="项目目录">
+        <p>项目内容</p>
+        <a href="#implementation">技术实践</a>
+        <a href="#media">演示视频</a>
+        <a href="../#projects">全部项目</a>
+      </nav>
+      <div class="detail-copy">
+        <section id="implementation">
+          <h2>技术实践</h2>
+          <ul class="implementation-list">
+            <li><strong>算法实现：</strong>基于 PyTorch 独立实现 PPO 训练与评估流程，构建共享特征层的 Actor–Critic 网络，完成在线轨迹采样、动作概率记录与多轮参数更新；</li><li><strong>训练优化：</strong>采用 GAE 估计优势、PPO-Clip 约束策略更新，在同批轨迹的多轮更新中固定优势估计与价值目标，并加入优势标准化与梯度裁剪；</li><li><strong>实验验证：</strong>在 CartPole-v1 上训练 <strong>330 回合</strong>，末 20 回合平均回报达到 <strong>500（满分）</strong>，末 100 回合平均回报达到 <strong>476.45</strong>；实现检查点保存、收敛曲线绘制与控制视频导出</li>
+          </ul>
+
+        </section>
+        <section id="media">
+          <h2>演示视频</h2>
+          <figure class="project-figure project-media">
+            <video controls playsinline preload="metadata" aria-label="强化学习-PPO 策略优化与 CartPole 控制演示视频"><source src="../assets/ppo-cartpole/demo.mp4" type="video/mp4">浏览器无法播放此视频，请使用下方链接打开。</video><p class="media-link"><a href="../assets/ppo-cartpole/demo.mp4" target="_blank" rel="noopener noreferrer">打开演示视频</a></p>
+            <figcaption>使用播放器查看项目演示。</figcaption>
+          </figure>
+        </section>
+
+        <div class="detail-next">
+          <a href="medical-grpo.html">上一个项目 · 大模型后训练-Qwen2.5-3B医疗知识GRPO强化学习</a>
+          <a href="world-model-control.html">下一个项目 · 基于世界模型的cartpole-swingup连续控制与在线规划</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="container site-footer"><span>© <span data-year>2026</span> zongyunfwx</span><span>探索智能，连接现实。</span><a href="#main">回到顶部 ↑</a></footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1014">
+  <meta name="description" content="从 FIR 系数设计与定点量化，到对称抽头优化和 HDL 仿真验证。">
+  <title>FPGA数字信号处理-基于 Verilog 的 FIR 滤波器设计与仿真 · zongyunfwx</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header"><div class="container header-inner"><a class="brand" href="../"><span class="brand-mark">z/</span>zongyunfwx<span class="accent">.</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" hidden>菜单 ＋</button><nav id="primary-nav" aria-label="主导航"><a href="../#about">关于</a><a href="../#expertise">技能</a><a href="../#projects">精选项目</a><a class="nav-contact" href="../#contact">联系我 ↗</a></nav></div></header>
+  <main id="main" class="container">
+    <div class="detail-hero">
+      <div class="breadcrumb"><a href="../">首页</a><span>/</span><a href="../#projects">项目作品</a></div>
+      <div class="detail-heading">
+        <div class="eyebrow">竞赛与嵌入式</div>
+        <h1>FPGA数字信号处理-基于 Verilog 的 FIR 滤波器设计与仿真</h1>
+        <p>从 FIR 系数设计与定点量化，到对称抽头优化和 HDL 仿真验证。</p>
+        <div class="tags"><span>Verilog</span><span>MATLAB</span><span>ModelSim</span></div>
+      </div>
+      <div class="project-outcome">乘法器 9 → 5</div>
+    </div>
+    <div class="detail-content">
+      <nav class="detail-aside" aria-label="项目目录">
+        <p>项目内容</p>
+        <a href="#implementation">技术实践</a>
+        <a href="#media">项目图片</a>
+        <a href="../#projects">全部项目</a>
+      </nav>
+      <div class="detail-copy">
+        <section id="implementation">
+          <h2>技术实践</h2>
+          <ul class="implementation-list">
+            <li><strong>滤波器设计：</strong> 基于 MATLAB 设计 <strong>8 阶 FIR 低通滤波器</strong>，采样率为 10kHz，完成滤波器频率响应分析、9 抽头系数生成及定点量化；</li><li><strong>FPGA 开发：</strong> 基于 <strong>Verilog HDL</strong> 实现采样延迟、乘法累加及多级寄存器运算，利用<strong>抽头系数对称性</strong>将乘法器数量由 <strong>9 个降至 5 个</strong>，优化硬件资源开销；</li><li><strong>仿真验证：</strong> 使用 <strong>ModelSim</strong> 搭建 Testbench，完成 <strong>8bit 输入、16bit 输出</strong>的定点滤波仿真，有效滤除 3kHz、4kHz 高频分量，输出结果与 MATLAB 一致。</li>
+          </ul>
+
+        </section>
+        <section id="media">
+          <h2>项目图片</h2>
+          <figure class="project-figure project-media">
+            <a href="../assets/fpga-fir/demo.png" target="_blank" rel="noopener noreferrer"><img src="../assets/fpga-fir/demo.png" width="1762" height="377" alt="FPGA数字信号处理-基于 Verilog 的 FIR 滤波器设计与仿真项目图片" loading="lazy" decoding="async"></a>
+            <figcaption>点击图片查看原图。</figcaption>
+          </figure>
+        </section>
+
+        <div class="detail-next">
+          <a href="picard-chebyshev.html">上一个项目 · 高精度惯导解算-Picard-Chebyshev 函数迭代导航解算</a>
+          <a href="linux-ins.html">下一个项目 · 导航系统-基于树莓派 Linux 的惯导测控系统开发</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="container site-footer"><span>© <span data-year>2026</span> zongyunfwx</span><span>探索智能，连接现实。</span><a href="#main">回到顶部 ↑</a></footer>
+</body>
+</html>

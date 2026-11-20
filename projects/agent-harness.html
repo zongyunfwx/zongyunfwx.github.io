@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1014">
+  <meta name="description" content="连接模型决策、工具执行与结果回传，集成技能加载、上下文压缩和多 Agent 协作。">
+  <title>大模型应用-Agent Harness 搭建 · zongyunfwx</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header"><div class="container header-inner"><a class="brand" href="../"><span class="brand-mark">z/</span>zongyunfwx<span class="accent">.</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" hidden>菜单 ＋</button><nav id="primary-nav" aria-label="主导航"><a href="../#about">关于</a><a href="../#expertise">技能</a><a href="../#projects">精选项目</a><a class="nav-contact" href="../#contact">联系我 ↗</a></nav></div></header>
+  <main id="main" class="container">
+    <div class="detail-hero">
+      <div class="breadcrumb"><a href="../">首页</a><span>/</span><a href="../#projects">项目作品</a></div>
+      <div class="detail-heading">
+        <div class="eyebrow">大模型与强化学习</div>
+        <h1>大模型应用-Agent Harness 搭建</h1>
+        <p>连接模型决策、工具执行与结果回传，集成技能加载、上下文压缩和多 Agent 协作。</p>
+        <div class="tags"><span>Agent Harness</span><span>FastAPI</span><span>Qwen3.5-4B</span></div>
+      </div>
+      <div class="project-outcome">工具调用闭环</div>
+    </div>
+    <div class="detail-content">
+      <nav class="detail-aside" aria-label="项目目录">
+        <p>项目内容</p>
+        <a href="#implementation">技术实践</a>
+        <a href="#media">项目图片</a>
+        <a href="../#projects">全部项目</a>
+      </nav>
+      <div class="detail-copy">
+        <section id="implementation">
+          <h2>技术实践</h2>
+          <ul class="implementation-list">
+            <li>基于Claude Code 搭建 <strong> Agent Harness</strong>，集成终端执行、文件读写与任务管理，实现模型决策、工具调用、结果回传的闭环流程。</li><li>引入 <strong>Skill 按需加载与上下文压缩</strong>，根据任务加载技能说明，通过历史裁剪、工具结果清理与摘要压缩控制上下文规模。</li><li>集成 <strong>子 Agent 与多 Agent 协作机制</strong>，支持任务拆分、消息通信和独立上下文，结合权限检查与 Hook 管理工具执行。</li><li>使用 <strong>FastAPI + Transformers</strong> 实现 Anthropic API 兼容服务，接入本地 <strong>Qwen3.5-4B</strong>，完成消息格式转换、工具调用解析与结果回传</li>
+          </ul>
+
+        </section>
+        <section id="media">
+          <h2>项目图片</h2>
+          <figure class="project-figure project-media">
+            <a href="../assets/agent-harness/demo.png" target="_blank" rel="noopener noreferrer"><img src="../assets/agent-harness/demo.png" width="1448" height="1086" alt="大模型应用-Agent Harness 搭建项目图片" loading="lazy" decoding="async"></a>
+            <figcaption>点击图片查看原图。</figcaption>
+          </figure>
+        </section>
+
+        <div class="detail-next">
+          <a href="neural-kalman.html">上一个项目 · 智能状态估计-基于 GRU 的自适应卡尔曼滤波</a>
+          <a href="smart-car.html">下一个项目 · 智能汽车竞赛-多传感器融合定位与自主导航</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="container site-footer"><span>© <span data-year>2026</span> zongyunfwx</span><span>探索智能，连接现实。</span><a href="#main">回到顶部 ↑</a></footer>
+</body>
+</html>

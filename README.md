@@ -18,16 +18,16 @@
 │   ├── vla.svg                        # 视觉语言动作概念图
 │   ├── navigation.svg                 # 路径规划概念图
 │   └── learning.svg                   # 网络与训练曲线概念图
-├── projects/
-│   ├── aerovla.html                    # AeroVLA 开源项目复现
-│   ├── autonomous-driving.html
-│   ├── vision-language-action.html
-│   ├── robot-navigation.html
-│   └── deep-learning.html
+├── projects/                          # 21 个独立项目详情页
+│   ├── autonomous-driving.html         # 自动驾驶决策规划
+│   ├── robot-navigation.html           # 世界模型 / Waypoint 导航
+│   ├── vision-language-action.html     # VLM 微调 / Action 导航
+│   ├── aerovla.html                    # 无人机 VLA 复现
+│   └── ...                            # 其余项目按语义化文件名组织
 └── README.md
 ```
 
-详情页包含项目概述、技术方案、评估计划和后续工作，并提供返回首页与下一个项目入口。所有页面均为真实静态 HTML 文件，支持直接访问与刷新；关闭 JavaScript 仍可浏览完整内容。
+首页按 `docs/项目汇总.md` 顺序展示 21 个项目，支持 7 个技术方向筛选，补充展示人脸识别、CAN/CANopen 和远程桌面实践。详情页包含技术实践及图片或视频，并提供前后项目与首页入口。图片与视频位于 `assets/<项目名>/demo.*`。所有页面均为真实静态 HTML 文件，支持直接访问与刷新；关闭 JavaScript 仍可浏览完整内容。
 
 ## 本地预览
 
@@ -49,10 +49,10 @@ python -m http.server 8000 --bind 127.0.0.1
 ## 替换为真实个人资料
 
 - `index.html`：修改显示名称、个人介绍、技术方向，以及首页项目摘要。
-- 联系方式：GitHub 使用与仓库对应的 `zongyunfwx` 账号；邮箱尚未提供，显示为“邮箱待补充”。确认邮箱后，可将该行替换为 `mailto:你的邮箱` 链接。
-- `projects/aerovla.html`：AeroVLA 开源项目复现，包含技术路线、复现步骤、代码核对笔记、评估记录及原项目链接。个人角色为复现，实验结果待补充。
-- 其余 `projects/*.html`：当前为明确标注的方案草稿，补充实际背景、个人职责、代码仓库、演示材料、数据来源、实验环境与真实结果后，再修改状态说明。不要把计划指标当作实测成果。
-- SVG 均为可编辑的概念示意图，训练曲线不是实际实验数据；可替换为真实截图或实验图，并更新 `alt` 描述。
+- 联系方式：GitHub 使用 `zongyunfwx` 账号；联系电话来自项目汇总文档。
+- `projects/*.html`：内容和实验数字来自 `docs/项目汇总.md`，按原描述保留任务、基线与指标含义；医学问答项目的 100% 指推理与答案标签完整率。
+- `projects/aerovla.html`：保留开源项目复现角色和原项目链接。
+- `docs/`：本地原始资料，Git 忽略。网站使用的图片和视频需复制到 `assets/` 后引用。
 - 增加项目时复制一个详情页，并在首页添加对应卡片；如新增分类，同步补充筛选按钮的 `data-filter` 与卡片的 `data-category`。
 - 所有内部地址使用相对路径，方便 GitHub Pages 根站点或项目子路径部署。
 

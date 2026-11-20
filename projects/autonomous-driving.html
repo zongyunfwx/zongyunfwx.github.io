@@ -1,5 +1,59 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0b1014"><meta name="description" content="从多视角视觉表征到未来轨迹预测，探索感知与规划的联合建模。"><title>端到端自动驾驶 · zongyunfwx</title><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css"><script src="../assets/main.js" defer></script></head>
-<body><a class="skip-link" href="#main">跳到主要内容</a><header class="site-header"><div class="container header-inner"><a class="brand" href="../"><span class="brand-mark">z/</span>zongyunfwx<span class="accent">.</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" hidden>菜单 ＋</button><nav id="primary-nav" aria-label="主导航"><a href="../#about">关于</a><a href="../#expertise">技能</a><a href="../#projects">精选项目</a><a class="nav-contact" href="../#contact">联系我 ↗</a></nav></div></header>
-<main id="main" class="container"><div class="detail-hero"><div class="breadcrumb"><a href="../">首页</a><span>/</span><a href="../#projects">精选项目</a><span>/</span>端到端自动驾驶</div><div class="detail-heading"><div class="eyebrow">PROJECT 01 / AUTONOMOUS DRIVING</div><h1>端到端自动驾驶</h1><p>从多视角视觉表征到未来轨迹预测，探索感知与规划的联合建模。</p><div class="tags"><span>BEV</span><span>Trajectory Planning</span><span>PyTorch</span></div></div><div class="detail-banner"><img src="../assets/autonomy.svg" width="640" height="380" alt="端到端自动驾驶概念示意图，非实际实验结果"></div><div class="detail-meta"><span><strong>DOMAIN</strong>自动驾驶</span><span><strong>STATUS</strong>方案草稿 · 待补充实际成果</span><span><strong>TYPE</strong>技术方向展示</span></div></div>
-<div class="detail-content"><nav class="detail-aside" aria-label="项目目录"><p>ON THIS PAGE</p><a href="#overview">01 项目概述</a><a href="#approach">02 技术方案</a><a href="#evaluation">03 评估计划</a><a href="#next">04 后续工作</a></nav><div class="detail-copy"><div class="status-box"><p>此页为项目方案展示模板，尚未提供已完成的实现、实验数据或代码仓库。以下描述为拟开展的工作，示意图不代表实测结果。</p></div><section id="overview"><h2>01 / 项目概述</h2><p>如何从连续的视觉观测中提取空间与时序信息，并生成可行、平滑的未来轨迹？该方向关注感知误差如何影响规划，以及离线预测与闭环表现之间的差异。</p></section><section id="approach"><h2>02 / 技术方案</h2><div class="pipeline" aria-label="方案流程"><span>多视角图像</span><b aria-hidden="true">→</b><span>空间 / 时序表征</span><b aria-hidden="true">→</b><span>轨迹预测</span><b aria-hidden="true">→</b><span>闭环评估</span></div><ul><li><strong>数据与任务定义：</strong>拟整理相机标定、历史帧、自车状态和未来轨迹标签，明确输入窗口与预测时域。</li><li><strong>模型与基线：</strong>以轨迹回归作为基线，逐步对比空间表征、时序融合与多模态轨迹输出。</li><li><strong>规划约束：</strong>计划分析碰撞风险、轨迹平滑性和道路约束，避免只用平均位移误差衡量规划质量。</li></ul></section><section id="evaluation"><h2>03 / 评估计划</h2><p>先明确基线、数据划分与运行环境，再记录实验结果。当前指标仅用于定义评估口径。</p><table class="evaluation-table"><thead><tr><th scope="col">评估维度</th><th scope="col">计划记录</th><th scope="col">状态</th></tr></thead><tbody><tr><td>轨迹误差</td><td>ADE / FDE；固定预测时域与采样间隔</td><td>待验证</td></tr><tr><td>闭环表现</td><td>任务完成率、碰撞与越界；需明确仿真环境</td><td>待验证</td></tr><tr><td>推理成本</td><td>端到端延迟与显存；记录设备和输入配置</td><td>待验证</td></tr></tbody></table></section><section id="next"><h2>04 / 后续工作</h2><p>离线轨迹指标无法直接代表闭环驾驶能力。后续需要补充场景划分、闭环仿真配置，以及失败案例的可视化分析。</p><ul><li>补充实际项目背景、个人职责和实现细节。</li><li>整理数据来源、依赖版本、运行命令与实验配置。</li><li>添加真实的评估结果、失败案例、演示和代码链接。</li></ul><p>项目代码与演示：待补充。</p></section><div class="detail-next"><a href="../#projects">← 返回全部项目</a><a href="vision-language-action.html">下一个项目：视觉语言动作模型 ↗</a></div></div></div></main><footer class="container site-footer"><span>© <span data-year>2026</span> zongyunfwx</span><span>探索智能，连接现实。</span><a href="#main">回到顶部 ↑</a></footer></body></html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1014">
+  <meta name="description" content="从结构化感知与高精地图，到生成式轨迹规划、世界模型融合与交通灯决策。">
+  <title>自动驾驶端到端决策规划算法 · zongyunfwx</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header"><div class="container header-inner"><a class="brand" href="../"><span class="brand-mark">z/</span>zongyunfwx<span class="accent">.</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" hidden>菜单 ＋</button><nav id="primary-nav" aria-label="主导航"><a href="../#about">关于</a><a href="../#expertise">技能</a><a href="../#projects">精选项目</a><a class="nav-contact" href="../#contact">联系我 ↗</a></nav></div></header>
+  <main id="main" class="container">
+    <div class="detail-hero">
+      <div class="breadcrumb"><a href="../">首页</a><span>/</span><a href="../#projects">项目作品</a></div>
+      <div class="detail-heading">
+        <div class="eyebrow">自动驾驶</div>
+        <h1>自动驾驶端到端决策规划算法</h1>
+        <p>从结构化感知与高精地图，到生成式轨迹规划、世界模型融合与交通灯决策。</p>
+        <div class="tags"><span>Transformer</span><span>Flow Matching</span><span>DiT</span></div>
+      </div>
+      <div class="project-outcome">推理步数 20 → 6</div>
+    </div>
+    <div class="detail-content">
+      <nav class="detail-aside" aria-label="项目目录">
+        <p>项目内容</p>
+        <a href="#implementation">技术实践</a>
+        <a href="#media">项目图片</a>
+        <a href="../#projects">全部项目</a>
+      </nav>
+      <div class="detail-copy">
+        <section id="implementation">
+          <h2>技术实践</h2>
+          <ul class="implementation-list">
+            <li>有图规划：基于结构化感知与高精地图，改进车辆和地图等要素的编码，采用Transformer进行交互，预测未来3s 10Hz轨迹；</li><li>Flow Matching：推动轨迹生成由Diffusion向Flow Matching迁移，重构训练目标与采样流程，实现推理步数由<strong>20</strong>降至<strong>6</strong>；</li><li>世界模型：参与<strong>端到端轨迹预测模型</strong>的规划模块设计，负责世界模型latent特征接入、DiT条件融合，实现3s、6点轨迹预测；</li><li>决策兜底：参与交通灯场景决策算法的<strong>迭代</strong>，融合信号灯、停止线及自车状态进行通行决策，完善感知抖动下的安全校验机制。</li>
+          </ul>
+
+        </section>
+        <section id="media">
+          <h2>项目图片</h2>
+          <figure class="project-figure project-media">
+            <a href="../assets/autonomous-driving/demo.png" target="_blank" rel="noopener noreferrer"><img src="../assets/autonomous-driving/demo.png" width="2490" height="1361" alt="自动驾驶端到端决策规划算法项目图片" loading="lazy" decoding="async"></a>
+            <figcaption>点击图片查看原图。</figcaption>
+          </figure>
+        </section>
+
+        <div class="detail-next">
+          <a href="sfml-tetris.html">上一个项目 · 俄罗斯方块-基于 C++ 和 SFML 的桌面游戏开发</a>
+          <a href="robot-navigation.html">下一个项目 · 具身智能VLN-世界模型导航算法研究-Waypoint方案</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="container site-footer"><span>© <span data-year>2026</span> zongyunfwx</span><span>探索智能，连接现实。</span><a href="#main">回到顶部 ↑</a></footer>
+</body>
+</html>

@@ -1,5 +1,59 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0b1014"><meta name="description" content="围绕可复现训练、误差分析与推理优化，搭建完整的视觉实验流程。"><title>视觉模型训练与部署 · zongyunfwx</title><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css"><script src="../assets/main.js" defer></script></head>
-<body><a class="skip-link" href="#main">跳到主要内容</a><header class="site-header"><div class="container header-inner"><a class="brand" href="../"><span class="brand-mark">z/</span>zongyunfwx<span class="accent">.</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" hidden>菜单 ＋</button><nav id="primary-nav" aria-label="主导航"><a href="../#about">关于</a><a href="../#expertise">技能</a><a href="../#projects">精选项目</a><a class="nav-contact" href="../#contact">联系我 ↗</a></nav></div></header>
-<main id="main" class="container"><div class="detail-hero"><div class="breadcrumb"><a href="../">首页</a><span>/</span><a href="../#projects">精选项目</a><span>/</span>视觉模型训练与部署</div><div class="detail-heading"><div class="eyebrow">PROJECT 04 / DEEP LEARNING ENGINEERING</div><h1>视觉模型训练与部署</h1><p>围绕可复现训练、误差分析与推理优化，搭建完整的视觉实验流程。</p><div class="tags"><span>Computer Vision</span><span>PyTorch</span><span>ONNX</span></div></div><div class="detail-banner"><img src="../assets/learning.svg" width="640" height="380" alt="视觉模型训练与部署概念示意图，非实际实验结果"></div><div class="detail-meta"><span><strong>DOMAIN</strong>深度学习</span><span><strong>STATUS</strong>方案草稿 · 待补充实际成果</span><span><strong>TYPE</strong>技术方向展示</span></div></div>
-<div class="detail-content"><nav class="detail-aside" aria-label="项目目录"><p>ON THIS PAGE</p><a href="#overview">01 项目概述</a><a href="#approach">02 技术方案</a><a href="#evaluation">03 评估计划</a><a href="#next">04 后续工作</a></nav><div class="detail-copy"><div class="status-box"><p>此页为项目方案展示模板，尚未提供已完成的实现、实验数据或代码仓库。以下描述为拟开展的工作，示意图不代表实测结果。</p></div><section id="overview"><h2>01 / 项目概述</h2><p>如何建立从数据检查、训练对比到模型导出的可复现流程，在精度与部署成本之间做出有依据的选择？</p></section><section id="approach"><h2>02 / 技术方案</h2><div class="pipeline" aria-label="方案流程"><span>数据检查</span><b aria-hidden="true">→</b><span>基线训练</span><b aria-hidden="true">→</b><span>误差分析</span><b aria-hidden="true">→</b><span>导出与验证</span></div><ul><li><strong>数据与复现：</strong>计划固定数据划分、随机种子和预处理，记录类别分布并检查数据泄漏。</li><li><strong>训练与对比：</strong>拟建立统一的训练配置，以单变量实验对比增强策略、损失函数和模型结构。</li><li><strong>部署验证：</strong>计划导出 ONNX，并检查导出前后的数值一致性，在相同硬件上测量预热后的推理延迟。</li></ul></section><section id="evaluation"><h2>03 / 评估计划</h2><p>先明确基线、数据划分与运行环境，再记录实验结果。当前指标仅用于定义评估口径。</p><table class="evaluation-table"><thead><tr><th scope="col">评估维度</th><th scope="col">计划记录</th><th scope="col">状态</th></tr></thead><tbody><tr><td>任务精度</td><td>按具体任务选择 Accuracy / F1 / mAP</td><td>待验证</td></tr><tr><td>推理效率</td><td>固定 batch、输入尺寸与硬件的延迟</td><td>待验证</td></tr><tr><td>导出一致性</td><td>输出数值误差与任务指标变化</td><td>待验证</td></tr></tbody></table></section><section id="next"><h2>04 / 后续工作</h2><p>部署优化需要在指定的硬件和运行时下测试。当前不提供未经测量的加速比或精度结果；图中曲线仅为概念示意。</p><ul><li>补充实际项目背景、个人职责和实现细节。</li><li>整理数据来源、依赖版本、运行命令与实验配置。</li><li>添加真实的评估结果、失败案例、演示和代码链接。</li></ul><p>项目代码与演示：待补充。</p></section><div class="detail-next"><a href="../#projects">← 返回全部项目</a><a href="aerovla.html">下一个项目：AeroVLA 开源复现 ↗</a></div></div></div></main><footer class="container site-footer"><span>© <span data-year>2026</span> zongyunfwx</span><span>探索智能，连接现实。</span><a href="#main">回到顶部 ↑</a></footer></body></html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1014">
+  <meta name="description" content="从 24 类手语字母分类训练，到摄像头逐帧识别与置信度显示。">
+  <title>计算机视觉-基于 CNN 的手语字母识别 · zongyunfwx</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header"><div class="container header-inner"><a class="brand" href="../"><span class="brand-mark">z/</span>zongyunfwx<span class="accent">.</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" hidden>菜单 ＋</button><nav id="primary-nav" aria-label="主导航"><a href="../#about">关于</a><a href="../#expertise">技能</a><a href="../#projects">精选项目</a><a class="nav-contact" href="../#contact">联系我 ↗</a></nav></div></header>
+  <main id="main" class="container">
+    <div class="detail-hero">
+      <div class="breadcrumb"><a href="../">首页</a><span>/</span><a href="../#projects">项目作品</a></div>
+      <div class="detail-heading">
+        <div class="eyebrow">视觉与端侧部署</div>
+        <h1>计算机视觉-基于 CNN 的手语字母识别</h1>
+        <p>从 24 类手语字母分类训练，到摄像头逐帧识别与置信度显示。</p>
+        <div class="tags"><span>CNN</span><span>Sign MNIST</span><span>OpenCV</span></div>
+      </div>
+      <div class="project-outcome">测试准确率 95.78%</div>
+    </div>
+    <div class="detail-content">
+      <nav class="detail-aside" aria-label="项目目录">
+        <p>项目内容</p>
+        <a href="#implementation">技术实践</a>
+        <a href="#media">项目图片</a>
+        <a href="../#projects">全部项目</a>
+      </nav>
+      <div class="detail-copy">
+        <section id="implementation">
+          <h2>技术实践</h2>
+          <ul class="implementation-list">
+            <li>基于 <strong>PyTorch</strong> 独立实现手语字母识别系统，完成 Sign MNIST 数据加载、标签映射及随机旋转与平移增强，支持 <strong>24 类静态手语字母</strong>识别。</li><li>设计由三层卷积和最大池化组成的 <strong>CNN</strong>，使用 AdamW 优化器并依据验证准确率调整学习率，在 <strong>7,172 张测试图像</strong>上达到 <strong>95.78% 准确率</strong>。</li><li>基于 <strong>OpenCV</strong> 实现摄像头识别原型，将采集画面裁剪并转换为 <strong>28×28 灰度图</strong>，逐帧推理并显示预测字母与置信度。</li>
+          </ul>
+
+        </section>
+        <section id="media">
+          <h2>项目图片</h2>
+          <figure class="project-figure project-media">
+            <a href="../assets/deep-learning/demo.png" target="_blank" rel="noopener noreferrer"><img src="../assets/deep-learning/demo.png" width="665" height="471" alt="计算机视觉-基于 CNN 的手语字母识别项目图片" loading="lazy" decoding="async"></a>
+            <figcaption>点击图片查看原图。</figcaption>
+          </figure>
+        </section>
+
+        <div class="detail-next">
+          <a href="world-model-control.html">上一个项目 · 基于世界模型的cartpole-swingup连续控制与在线规划</a>
+          <a href="neural-kalman.html">下一个项目 · 智能状态估计-基于 GRU 的自适应卡尔曼滤波</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="container site-footer"><span>© <span data-year>2026</span> zongyunfwx</span><span>探索智能，连接现实。</span><a href="#main">回到顶部 ↑</a></footer>
+</body>
+</html>

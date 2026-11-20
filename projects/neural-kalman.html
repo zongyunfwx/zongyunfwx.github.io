@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1014">
+  <meta name="description" content="结合状态空间先验与三路 GRU 增益估计，完成含噪时序信号的递推滤波。">
+  <title>智能状态估计-基于 GRU 的自适应卡尔曼滤波 · zongyunfwx</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header"><div class="container header-inner"><a class="brand" href="../"><span class="brand-mark">z/</span>zongyunfwx<span class="accent">.</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" hidden>菜单 ＋</button><nav id="primary-nav" aria-label="主导航"><a href="../#about">关于</a><a href="../#expertise">技能</a><a href="../#projects">精选项目</a><a class="nav-contact" href="../#contact">联系我 ↗</a></nav></div></header>
+  <main id="main" class="container">
+    <div class="detail-hero">
+      <div class="breadcrumb"><a href="../">首页</a><span>/</span><a href="../#projects">项目作品</a></div>
+      <div class="detail-heading">
+        <div class="eyebrow">导航与状态估计</div>
+        <h1>智能状态估计-基于 GRU 的自适应卡尔曼滤波</h1>
+        <p>结合状态空间先验与三路 GRU 增益估计，完成含噪时序信号的递推滤波。</p>
+        <div class="tags"><span>GRU</span><span>Kalman Filter</span><span>PyTorch</span></div>
+      </div>
+      <div class="project-outcome">3,000 步非线性轨迹测试</div>
+    </div>
+    <div class="detail-content">
+      <nav class="detail-aside" aria-label="项目目录">
+        <p>项目内容</p>
+        <a href="#implementation">技术实践</a>
+        <a href="#media">项目图片</a>
+        <a href="../#projects">全部项目</a>
+      </nav>
+      <div class="detail-copy">
+        <section id="implementation">
+          <h2>技术实践</h2>
+          <ul class="implementation-list">
+            <li>基于 <strong>PyTorch</strong> 实现神经网络辅助的递推滤波器，结合状态空间模型的先验预测与观测新息校正，实现含噪时序信号的在线状态估计。</li><li>实现 <strong>三路 GRU 增益估计模块</strong>，融合观测差分、观测新息与状态更新残差，逐时刻估计卡尔曼增益并更新后验状态。</li><li>搭建从仿真数据生成、批量训练到测试评估的完整流程，覆盖匀加速运动与 Lorenz 混沌系统，模拟仅位置观测、降采样和模型失配场景。</li><li>以 <strong>KF / EKF</strong> 为基线，使用 <strong>MSE（dB）</strong> 和轨迹重建结果评估滤波表现，测试覆盖单条 <strong>3,000 步</strong>的非线性轨迹。</li>
+          </ul>
+
+        </section>
+        <section id="media">
+          <h2>项目图片</h2>
+          <figure class="project-figure project-media">
+            <a href="../assets/neural-kalman/demo.png" target="_blank" rel="noopener noreferrer"><img src="../assets/neural-kalman/demo.png" width="1503" height="1327" alt="智能状态估计-基于 GRU 的自适应卡尔曼滤波项目图片" loading="lazy" decoding="async"></a>
+            <figcaption>点击图片查看原图。</figcaption>
+          </figure>
+        </section>
+
+        <div class="detail-next">
+          <a href="deep-learning.html">上一个项目 · 计算机视觉-基于 CNN 的手语字母识别</a>
+          <a href="agent-harness.html">下一个项目 · 大模型应用-Agent Harness 搭建</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="container site-footer"><span>© <span data-year>2026</span> zongyunfwx</span><span>探索智能，连接现实。</span><a href="#main">回到顶部 ↑</a></footer>
+</body>
+</html>

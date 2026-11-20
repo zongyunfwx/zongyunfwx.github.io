@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1014">
+  <meta name="description" content="搭建医学问答后训练流程，以语义、流畅度和标签规则构建复合奖励。">
+  <title>大模型后训练-Qwen2.5-3B医疗知识GRPO强化学习 · zongyunfwx</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header"><div class="container header-inner"><a class="brand" href="../"><span class="brand-mark">z/</span>zongyunfwx<span class="accent">.</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" hidden>菜单 ＋</button><nav id="primary-nav" aria-label="主导航"><a href="../#about">关于</a><a href="../#expertise">技能</a><a href="../#projects">精选项目</a><a class="nav-contact" href="../#contact">联系我 ↗</a></nav></div></header>
+  <main id="main" class="container">
+    <div class="detail-hero">
+      <div class="breadcrumb"><a href="../">首页</a><span>/</span><a href="../#projects">项目作品</a></div>
+      <div class="detail-heading">
+        <div class="eyebrow">大模型与强化学习</div>
+        <h1>大模型后训练-Qwen2.5-3B医疗知识GRPO强化学习</h1>
+        <p>搭建医学问答后训练流程，以语义、流畅度和标签规则构建复合奖励。</p>
+        <div class="tags"><span>Qwen2.5-3B</span><span>GRPO</span><span>Unsloth</span></div>
+      </div>
+      <div class="project-outcome">标签完整率 30.3% → 100%</div>
+    </div>
+    <div class="detail-content">
+      <nav class="detail-aside" aria-label="项目目录">
+        <p>项目内容</p>
+        <a href="#implementation">技术实践</a>
+        <a href="#media">项目图片</a>
+        <a href="../#projects">全部项目</a>
+      </nav>
+      <div class="detail-copy">
+        <section id="implementation">
+          <h2>技术实践</h2>
+          <ul class="implementation-list">
+            <li><strong>训练流程：</strong> 独立搭建 Qwen2.5-3B-Instruct 医学问答后训练流程，完成数据清洗、对话模板构建、组内采样、奖励计算与策略更新；</li><li><strong>奖励设计：</strong> 使用 CrossEncoder 评估答案与参考答案的语义相似度，以 BioGPT 困惑度衡量文本流畅度，结合推理与答案标签规则构建复合奖励；</li><li><strong>训练优化：</strong> 基于 TRL 与 Unsloth 实现 GRPO 后训练，采用 <strong>4-bit 量化 + LoRA</strong> 降低显存开销，结合 vLLM 为每道题采样 <strong>5 条候选回答</strong>，完成 <strong>200 步</strong>训练；</li><li><strong>效果评估：</strong> 在 <strong>198 道留出测试题</strong>上对比训练前后输出，推理与答案标签均完整的比例由 <strong>30.3% 提升至 100%</strong></li>
+          </ul>
+          <p class="result-note">198 道留出测试题上的 100% 指推理与答案标签的完整比例。评估同时保留训练前 30.3% 的对照。</p>
+        </section>
+        <section id="media">
+          <h2>项目图片</h2>
+          <figure class="project-figure project-media">
+            <a href="../assets/medical-grpo/demo.png" target="_blank" rel="noopener noreferrer"><img src="../assets/medical-grpo/demo.png" width="2160" height="1440" alt="大模型后训练-Qwen2.5-3B医疗知识GRPO强化学习项目图片" loading="lazy" decoding="async"></a>
+            <figcaption>点击图片查看原图。</figcaption>
+          </figure>
+        </section>
+
+        <div class="detail-next">
+          <a href="thermal-gesture.html">上一个项目 · 嵌入式视觉-热成像手势识别算法及端侧部署</a>
+          <a href="ppo-cartpole.html">下一个项目 · 强化学习-PPO 策略优化与 CartPole 控制</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="container site-footer"><span>© <span data-year>2026</span> zongyunfwx</span><span>探索智能，连接现实。</span><a href="#main">回到顶部 ↑</a></footer>
+</body>
+</html>
